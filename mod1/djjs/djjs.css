@@ -1,0 +1,9 @@
+.square {
+    position: relative;
+    border: outset 5px purple;
+    height: 200px;
+    width: 200px;
+    left: 40%;
+    top: 40px;
+    font-size: 0px;
+}
