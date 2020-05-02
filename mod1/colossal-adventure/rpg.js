@@ -3,7 +3,7 @@ const readline = require("readline-sync");
 //*****Variables*****//
 let gameOver = false
 
-function character (name, health, damage, attack, items, phrase) {
+function Character (name, health, damage, attack, items, phrase) {
     this.name = name;
     this.health = health;
     this.damage = damage;
@@ -12,11 +12,11 @@ function character (name, health, damage, attack, items, phrase) {
     this.phrase = phrase;
 }
 
-const player = new character ("", 100, 40, "zaps")
-const infected = new character ("A COVID-19-Infected Person", 80, 20, " coughs on", [" an uncashed stimulus check"], "Ahh man, now I'm *cough* *hack* late for my party!")
-const trump = new character ("Trump, armed with Lysol and misinformation,", 60, 15, " pitifully swipes at", [" a Lysol-filled syringe"], "FLATTENING OF THE CURVE @realDonaldTrump")
-const karen = new character ("Karen, a maskless protestor,", 40, 10, " screeches at", [" several cases of toilet paper"], "You got blood on my jeans. I'm reporting this to your manager!!")
-const conspiracy = new character ("Coronavirus Conspiracy Theorist", 20, 5, " agressively argues with", [" a crusty tin-foil hat"], "THOSE 5G TOWERS MADE ME DO THIS!!")
+const player = new Character ("", 100, 40, "zaps")
+const infected = new Character ("A COVID-19-Infected Person", 80, 20, " coughs on", [" an uncashed stimulus check"], "Ahh man, now I'm *cough* *hack* late for my party!")
+const trump = new Character ("Trump, armed with Lysol and misinformation,", 60, 15, " pitifully swipes at", [" a Lysol-filled syringe"], "FLATTENING OF THE CURVE @realDonaldTrump")
+const karen = new Character ("Karen, a maskless protestor,", 40, 10, " screeches at", [" several cases of toilet paper"], "You got blood on my jeans. I'm reporting this to your manager!!")
+const conspiracy = new Character ("Coronavirus Conspiracy Theorist", 20, 5, " agressively argues with", [" a crusty tin-foil hat"], "THOSE 5G TOWERS MADE ME DO THIS!!")
 
 let enemiesArray = [infected, trump, karen, conspiracy]
 
@@ -33,10 +33,8 @@ function walk () {
         return randomEnemy()
     } 
 }
-const playerFight = function (player) {
-    return Math.floor(Math.random() * player.damage) + 1
-}
-const enemyFight = function (character) {
+
+const fightDamage = function (character) {
     return Math.floor(Math.random() * character.damage) + 1
 } 
 
@@ -51,7 +49,7 @@ function randomEnemy () {
                 player.health = (player.health - fleeDamage)
                 readline.question("You have escaped, but took " + fleeDamage + " damage.")
             } else {
-                readline.question("You want to flee... but you're far tnodeoo slow.")
+                readline.question("You want to flee... but you're far too slow.")
                 fight ()
             }
         } else if (fightOrFlight.toLowerCase() === 'a') {
@@ -61,12 +59,12 @@ function randomEnemy () {
     function fight () {
         while (player.health > 0, enemiesArray[num].health > 0) {
             for (let i = 0; i < 1; i++) {
-                let damage = playerFight(player)
+                let damage = fightDamage(player)
                 enemiesArray[num].health = (enemiesArray[num].health - damage)
                 readline.question(player.name + " zaps the enemy with the cattle prod for " + damage + " damage.")
             } 
             for (let i = 0; i < 1; i++) {
-                let damage = enemyFight(enemiesArray[num])
+                let damage = fightDamage(enemiesArray[num])
                 player.health = (player.health - damage)
                 readline.question(enemiesArray[num].name + enemiesArray[num].attack + " you for " + damage + " damage.")
             }
@@ -84,7 +82,7 @@ function randomEnemy () {
             if (enemiesArray.length > 0) {
                 return options
             } else {
-                console.log("You have narrowly escaped with your life and made it to... the line wrapping around the store. Screw it. You're lactose intolerant anyway.")
+                readline.question("You have narrowly escaped with your life and made it to... the line wrapping around the store. Screw it. You're lactose intolerant anyway.")
                 gameOver = true
             }
         } 
