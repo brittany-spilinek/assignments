@@ -1,3 +1,87 @@
 {
-    
+    "appetizers": [
+        {
+            "name": "salad",
+            "ingredients": ["lettuce", "tomato", "cucumber"],
+            "description": "It's a salad."
+        },
+        {
+            "name": "chips and salsa",
+            "ingredients": ["chips", "salsa"],
+            "description": "Chips and salsa."
+        },
+        {
+            "name": "hummus",
+            "ingredients": ["chickpeas", "stuff", "olive oil"],
+            "description": "Hummus with a side of veggies."
+        }
+    ],
+    "cold sandwiches": [
+        {
+            "name": "PB&J",
+            "ingredients": ["peanut butter", "jelly", "bread"],
+            "description": "Your childhood favorite."
+        },
+        {
+            "name": "veggie wrap",
+            "ingredients": ["tomato", "lettuce", "cucumber", "mayo", "tortilla"],
+            "description": "A bunch of veg rolled up in a tortilla."
+        },
+        {
+            "name": "cucumber sandwich",
+            "ingredients": ["cucumber", "mayo", "other stuff"],
+            "description": "A cucumber sandwich."
+        }
+    ],
+    "hot sandwiches": [
+        {
+            "name": "grilled cheese",
+            "ingredients": ["bread", "cheese", "butter"],
+            "description": "Your other childhood favorite."
+        },
+        {
+            "name": "grilled veggie sandwich",
+            "ingredients": ["peppers", "squash", "eggplant", "hummus"],
+            "description": "Grilled veggies, but smashed in bread."
+        },
+        {
+            "name": "veggie burger",
+            "ingredients": ["beyond patty", "lettuce", "tomato", "cheese", "bun"],
+            "description": "Actually pretty good"
+        }
+    ],
+    "desserts": [
+        {
+            "name": "chocolate chip cookie",
+            "ingredients": ["flour", "sugar", "etc"],
+            "description": "Yet another childhood favorite."
+        },
+        {
+            "name": "ice cream",
+            "ingredients": ["cream", "sugar", "toppings"],
+            "description": "Chocolate, vanilla, strawberry"
+        },
+        {
+            "name": "pie",
+            "ingredients": ["flour", "sugar", "milk", "butter", "filling"],
+            "description": "Not America's favorite pie."
+        }
+    ],
+    "drinks": [
+        {
+            "name": "water",
+            "ingredients": ["water", "ice"],
+            "description": "Refreshing, necessary for life."
+        },
+        {
+            "name": "soda",
+            "ingredients": ["carbonated water", "syrup"],
+            "description": "Refreshing, not necessary for life."
+        },
+        {
+            "name": "tea",
+            "ingredients": ["water", "leafy remnants"],
+            "description": "So many leaves."
+        }
+    ]
 }
