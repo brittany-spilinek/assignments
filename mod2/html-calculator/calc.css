@@ -1,0 +1,36 @@
+body {
+    margin: 20px;
+}
+
+#add {
+    background-color: lightcyan;
+    display: inline-block;
+    height: auto;
+    width: auto;
+    border: dotted 2px black;
+    padding: 5px;
+    margin: 10px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+#sub{
+    background-color: lightgoldenrodyellow;
+    display: inline-block;
+    height: auto;
+    width: auto;
+    border: dotted 2px black;
+    padding: 5px;
+    margin: 10px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+#mult {
+    background-color: lightpink;
+    display: inline-block;
+    height: auto;
+    width: auto;
+    border: dotted 2px black;
+    padding: 5px;
+    margin: 10px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}

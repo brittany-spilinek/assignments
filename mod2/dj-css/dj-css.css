@@ -1,0 +1,85 @@
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 150px);
+    grid-template-rows: 150px 150px;
+    gap: 50px;
+    margin: 50px;
+    justify-content: center;
+}
+
+.box {
+    height: 150px;
+    width: 150px;
+    border: solid 2px black;
+    border-radius: 10%;
+    
+}
+
+#box1 {
+    background-color: #03A6A6;
+    transition: all 800ms ease-in;
+}
+
+#box2 {
+     background-color: #F28A2E;
+     transition: all 500ms linear 1s;
+}
+
+#box3 {
+    background-color: #F23D3D;
+    transition: all 100ms ease-in;
+}
+
+#box4 {
+    background-color: #4A88D9;
+    transition: all 400ms ease-in-out 100ms;
+}
+
+#box5 {
+    background-color: #04B2D9;
+    transition: all 1s ease;
+}
+
+#box6 {
+    background-color: #F2CB05;
+    transition: all 200ms ease-in 100ms;
+} 
+
+#box1:hover{
+    border-radius: 50%;
+    opacity: 50%;
+    transition: all 800ms ease-in;
+}
+
+#box2:hover{
+    border: 4px dotted;
+    box-shadow: 5px 5px 5px 0 gray;
+    transition: all 100ms linear;
+}
+
+#box3:hover {
+    background-color: white;
+    border: white;
+    transition: all 100ms ease-out;
+}
+
+#box4:hover {
+    height: 200px;
+    background-color: #F23D3D;
+    border: 6px #F28A2E solid;
+    width: 144px;
+    transition: all 400ms ease-in-out;
+}
+
+#box5:hover {
+    height: 100px;
+    width: 100px;
+    margin: 20px;
+    transition: all 1s ease;
+}
+
+#box6:hover {
+    width: 200px;
+    border: 2px dashed black;
+    transition: all 200ms ease-in 100ms;
+}
