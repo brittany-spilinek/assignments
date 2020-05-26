@@ -1,0 +1,25 @@
+body {
+    text-align: center;
+}
+
+#todo {
+    list-style: none;
+    display: inline-block;
+    width: 50%;
+}
+
+#todo > li {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: flex-start;
+}
+
+#todo > li > button, input {
+    align-self: flex-start;
+    order: -1;
+}
+
+img {
+    height: 100px;
+}
