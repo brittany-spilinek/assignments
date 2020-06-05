@@ -1,25 +1,44 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
     text-align: center;
+    background-color: #F29E03;
+    color: #0C4056;
 }
 
 #todo {
     list-style: none;
     display: inline-block;
-    width: 50%;
+    width: 60%;
 }
 
 #todo > li {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
-    align-content: flex-start;
+    align-content: center;  
 }
 
 #todo > li > button, input {
-    align-self: flex-start;
+    align-self: center;
     order: -1;
+    
+}
+
+#todoItem {
+    border: 1px #007D8A solid;
+    padding: 10px;
+    background-color: #F85155;
+    margin: 5px
 }
 
 img {
     height: 100px;
+    margin: 15px;
+}
+
+#text {
+    align-self: center;
+    margin: 5px;
 }

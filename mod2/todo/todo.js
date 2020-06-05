@@ -20,9 +20,12 @@ getTodo()
 
 function createTodo (response) {
     const li = document.createElement('li');
-    li.textContent = `${response.title} - $${response.price} - ${response.description}`;
     li.id = "todoItem";
     list.appendChild(li);
+    const div = document.createElement('div');
+    div.textContent = `${response.title} - $${response.price} - ${response.description}`;
+    div.id = "text";
+    li.appendChild(div);
     const checkbox = document.createElement('input');
     checkbox.setAttribute("type", "checkbox");
     checkbox.name = "checkbox"

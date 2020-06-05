@@ -20,10 +20,10 @@ class Player {
             return this.status = 'Dead', this.gameActive = false
         } else if (this.status === 'Big') {
             return this.status = 'Small'
-        } else if (this.status === 'Powered Up') {
+        } else if (this.status === 'Powered Up' && this.hasStar === false) {
             return this.status = 'Big'
-        } else if (this.status === 'Powered Up', this.hasStar === true) {
-            return this.status = 'Powered Up', this.hasStar = false
+        } else if (this.status === 'Powered Up' && this.hasStar === true) {
+            return this.status = 'Powered Up', this.hasStar = false, console.log('Your star protected you!')
         }
     }
 
@@ -32,8 +32,8 @@ class Player {
             return this.status = 'Big'
         } else if (this.status === 'Big') {
             return this.status = 'Powered Up'
-        } else if (this.status === 'Powered Up') {
-            return this.status = 'Powered Up', this.hasStar = true, console.log('You have a star!\n')
+        } else if (this.status === 'Powered Up' && this.hasStar === false) {
+            return this.status = 'Powered Up', this.hasStar = true, console.log('You have a star!')
         }
     }
 
@@ -54,21 +54,23 @@ class Player {
 }
 
 const luigi = new Player ('Luigi', 0, 'Powered Up', false, true)
+
 function game(player) {
     let id = setInterval(() => {
-                if(player.gameActive === true) {
-                    player.print()
-                } else if(player.gameActive === false) {
-                    console.log('You have died.'), player.print(), clearInterval(id)
-                }
-                let result = Math.floor(Math.random() * 3)
-                if (result === 0) {
-                    return player.gotHit()
-                } else if (result === 1) {
-                    return player.gotPowerup()
-                } else if (result === 2) {
-                    return player.addCoin()
-                } 
-        }, 1000); 
+        if(player.gameActive === true) {
+            player.print()
+        } else if(player.gameActive === false) {
+            console.log('You have died.'), player.print(), clearInterval(id)
+        }
+        let result = Math.floor(Math.random() * 3)
+        if (result === 0) {
+            return player.gotHit()
+        } else if (result === 1) {
+            return player.gotPowerup()
+        } else if (result === 2) {
+            return player.addCoin()
+        } 
+    }, 1000); 
 }
+
 game(luigi)
