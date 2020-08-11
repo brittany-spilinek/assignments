@@ -1,0 +1,29 @@
+* {
+    box-sizing: border-box;
+}
+
+.app {
+    border: 1px solid gray;
+    margin: 40px 25% 0 25%;
+    width: 50%;
+    text-align: center;
+}
+
+.card {
+    margin: 30px;
+    padding: 10px;
+    border: 2px dotted peachpuff;
+}
+
+.place {
+    font-weight: bold;
+}
+
+.price {
+    font-style: italic;
+    color: green;
+}
+
+.timeToGo {
+    color: blue
+}

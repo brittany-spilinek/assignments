@@ -19,6 +19,8 @@ function getTodo() {
 getTodo()
 
 function createTodo (response) {
+
+    // Create elements
     const li = document.createElement('li');
     li.id = "todoItem";
     list.appendChild(li);
@@ -30,6 +32,13 @@ function createTodo (response) {
     checkbox.setAttribute("type", "checkbox");
     checkbox.name = "checkbox"
     checkbox.id = response._id;
+    checkbox.checked = response.completed
+    if(checkbox.checked){
+        div.style.textDecoration = 'line-through'
+    }else {
+        div.style.textDecoration = 'none'
+    }
+
     li.appendChild(checkbox);
     const button = document.createElement('button');
     button.id = response._id;
@@ -43,6 +52,8 @@ function createTodo (response) {
 //2. POST
 todoForm.addEventListener("submit", (event) => {
     event.preventDefault()
+
+
 
     const newTodo = {
         title: todoForm.title.value,
@@ -64,7 +75,9 @@ todoForm.addEventListener("submit", (event) => {
 })
 
 //3.PUT
-document.getElementById("todo").addEventListener("click", (event) => {
+document.getElementById("todo").addEventListener("click", handleCheck)
+
+function handleCheck(event){
     const checkedInputs = []
     if(event.target.name === "checkbox") {
         if(event.target.checked) {
@@ -87,7 +100,7 @@ document.getElementById("todo").addEventListener("click", (event) => {
                 .catch(error => console.log(error))
         }
     }
-})
+}
 
 //4. DELETE
 document.getElementById("todo").addEventListener("click", (event) => {
