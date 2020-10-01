@@ -1,0 +1,23 @@
+body {
+    margin: 20px;
+    background-color: black;
+    text-align: center;
+}
+
+.container {
+    display: grid;
+    grid-template-rows: 200px 200px;
+    grid-template-columns: 200px 200px;
+    gap: 5px;
+    justify-content: center;
+}
+
+.square {
+    border: gray 1px solid;
+}
+
+.button {
+    height: 40px;
+    width: 65px;
+    margin: 30px 10px;
+}
